@@ -248,8 +248,11 @@
       lucide.createIcons();
     }
 
+    // Google Sheet backend URL (Published as CSV)
+    const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQp3cnB-PsP6wsEl-0D8qr00v7jeZOuHwN2luHOEQ-d2bqtwOKC4C3QWOds_M_mKM_3DBS8RTSjTrIa/pub?output=csv';
+
     // Load CSV Data
-    Papa.parse('data.csv', {
+    Papa.parse(GOOGLE_SHEET_CSV_URL, {
       download: true,
       header: true,
       dynamicTyping: true,
